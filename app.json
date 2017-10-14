@@ -1,7 +1,7 @@
 {
   "name": "pikoycare",
   "description": "Build API for Pikoy",
-  "repository": "https://github.com/api-ai/apiai-weather-webhook-sample",
+  "repository": "https://github.com/azerokido/pikoycare",
   "logo": "http://xvir.github.io/img/apiai.png",
   "keywords": ["api.ai", "natural language"]
 }
