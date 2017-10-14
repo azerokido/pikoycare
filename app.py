@@ -28,15 +28,27 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "shipping.cost":
+    if req.get("result").get("action") != "sample.fee":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    zone = parameters.get("shipping-zone")
+    zone = parameters.get("number")
 
     cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
 
-    speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
+    speech = "show me the remittance fee of 1000"
+    
+    num = 600
+    if num >= 0 and num <= 100:
+    print("The fee for the amount of",  num , "is PHP 2.00")
+    elif num >= 101 and num <= 300:
+    print("The fee for the amount of",  num , "is PHP 3.00")
+    elif num >= 301 and num <= 500:
+    print("The fee for the amount of",  num , "is PHP 8.00")
+    elif num >= 501 and num <= 700:
+    print("The fee for the amount of",  num , "is PHP 10.00","\n","Discount is 1.00")
+    else:
+    print(num)
 
     print("Response:")
     print(speech)
